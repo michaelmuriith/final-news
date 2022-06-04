@@ -1,0 +1,40 @@
+form{
+  background-color: white;
+  border-radius: 15px;
+  width: 550px;
+  margin: 20px auto;
+  /* height: 600px; */
+}
+
+form > .header{
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a2a2a2;
+  color: #ffffff;
+  align-items: center;
+  height: 40px;
+}
+
+.form_body{
+  text-align: left;
+  padding: 20px 10px;
+}
+
+.form_body > *{
+  padding: 5px;
+}
+
+form > .form_body > .mb-3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+form > .form_body > .mb-3 > label {
+  width: 40%;
+}
+
+form > .form_body > .mb-3 > input{
+  width: 50%;
+}
