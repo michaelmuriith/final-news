@@ -24,7 +24,8 @@ export const Navbar = () => {
                 <Box alignItems="right" sx={{ flexGrow: 1, textAlign: "right", justifySelf: 'flex-end'  }} >
                     { user ? 
                         <>
-                            <Link to="/user" style={{textDecoration: "none", color: "white", marginRight: "10px"}}>{user.display_name}</Link>
+                            <Link to="/user" style={{textDecoration: "none", color: "white", marginRight: "10px"}}>profile</Link>
+                            <Link to="/addNews" style={{textDecoration: "none", color: "white", marginRight: "10px"}}>Add Article</Link>
                             <Button onClick={onLogout} style={{textDecoration: "none", color: "white"}}>Logout</Button>
                         </> : <>
                             <Link to="/login" style={{textDecoration: "none", color: "white", marginRight: "10px"}}>Login</Link>

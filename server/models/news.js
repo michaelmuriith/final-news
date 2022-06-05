@@ -11,6 +11,10 @@ const newsSchema = new Schema(
         type: String,
         required: false,
     },
+    description: {
+      type: String,
+      required: false,
+    },
     content: {
       type: String,
       required: true,
@@ -18,6 +22,10 @@ const newsSchema = new Schema(
     categoryId: {
         type: String,
         required: true
+    },
+    tagId: {
+      type: String,
+      required: true
     },
     authorId: {
         type: String,

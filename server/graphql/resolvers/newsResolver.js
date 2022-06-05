@@ -1,6 +1,21 @@
 const News = require("../../models/news");
+const path = require('path');
+const fs = require('fs')
+
 
 module.exports = {
+
+  // uploadFile: async(parent, ({file}) => {
+  //   const { createReadStream, filename, mimetype, encoding } = await file
+    
+  //   const stream = createReadStream();
+  //   const pathName = path.join(__dirname, `/public/images/${filename}`)
+  //   await stream.pipe(fs.createWriteStream(pathName))
+  //   return {
+  //     url: `http://localhost:4000/images/${pathName}`
+  //   }
+  // }),
+
   Query: {
     getSingleNews: async (parent, args) => {
       try {
@@ -28,6 +43,7 @@ module.exports = {
   },
 
   Mutation: {
+
     addNews: async (parent, args) => {
       try {
         const { newsData } = args;
@@ -36,6 +52,35 @@ module.exports = {
         throw new Error(error);
       }
     },
+
+    // addNews: async (_, {newsData : {
+    //   headline,
+    //   coverImage,
+    //   content,
+    //   categoryId,
+    //   authorId
+    // }}) => {
+    //   try {
+    //     coverImage = uploadFile(coverImage);
+
+    //     const newArticle = new News({
+    //       headline,
+    //       coverImage,
+    //       content,
+    //       categoryId,
+    //       authorId
+    //     });
+        
+    //     const res = await newArticle.save();
+
+    //     return {
+    //       ...res._doc,
+    //       id:res._id,
+    //     }
+    //   } catch (error) {
+    //     throw new Error(error);
+    //   }
+    // },
     // updateNote: async (parent, args) => {
     //   try {
     //     const { id, noteInput } = args;
